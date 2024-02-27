@@ -1,0 +1,9 @@
+[submodule "spring_config_server"]
+	path = spring_config_server
+	url = https://github.com/llsilvas/spring_config_server
+[submodule "spring_config_repo"]
+	path = spring_config_repo
+	url = https://github.com/llsilvas/spring_config_repo
+[submodule "docker"]
+	path = docker
+	url = https://github.com/llsilvas/docker.git
