@@ -4,3 +4,6 @@
 [submodule "docker"]
 	path = docker
 	url = https://github.com/llsilvas/docker.git
+[submodule "spring-config-server"]
+	path = spring-config-server
+	url = https://github.com/llsilvas/spring-config-server.git
