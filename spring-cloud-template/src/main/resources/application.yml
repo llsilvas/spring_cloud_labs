@@ -1,0 +1,45 @@
+spring:
+    application:
+        name: spring-cloud-template
+    config:
+        import: optional:configserver:http://${CONFIG_SERVER:localhost}:8888
+        name: spring-cloud-template
+
+
+management:
+    info:
+        build:
+            enabled: true
+        git:
+            enabled: true
+        java:
+            enabled: true
+    endpoint:
+        health:
+            probes:
+                enabled: true
+            rabbit:
+                enable: true
+            show-details: always
+        env:
+            post:
+                enabled: true
+        prometheus:
+            enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: '*'
+            cors:
+                allowed-origins: true
+    metrics:
+        enable:
+            jvm: true
+        export:
+            prometheus:
+                enabled: true
+        distribution:
+            slo:
+                http: 50ms,100ms,200ms,300ms,500ms,1s
+        tags:
+            application: @project.name@
